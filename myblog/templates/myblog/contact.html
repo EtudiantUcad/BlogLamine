@@ -1,0 +1,66 @@
+{%extends './base.html'%}
+
+{%load static%}
+
+{% load crispy_forms_tags%}
+	 {%block content%}
+	 <style type="text/css">
+	    	#id_message{
+	    		min-height: 200px;
+	    		font-family: monospace;
+	    	}
+	    </style>
+	
+
+	     <title>Blog</title>
+	    <section class="blog-list px-3 py-5 p-md-5">
+		    <div class="container single-col-max-width">
+
+
+		    	
+		    	<!-- Wrapper container -->
+						<div class="container py-4">
+							{%if messages%}
+								{%for message in messages%}
+
+								  <div class="alert alert-primary alert-dismissible fade show" role="alert">
+								  <strong>Alert du Serveur!!!!</strong> {{message}}
+								  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+								</div>
+
+
+								{%endfor%}
+				            {%endif%}
+
+							<h4 style="font-family:monospace;" align="center">Contact</h4>
+							<hr class="solid">
+
+						  <!-- Bootstrap 5 starter form -->
+						  <form id="contactForm" data-sb-form-api-token="API_TOKEN" enctype="multipart/form-data" action="{% url 'contact-view' %}" method="POST">
+                             {{form|crispy}}  
+                             {%csrf_token%}		
+
+
+						    <!-- Form submit button -->
+						</br></br>
+						    <div class="d-grid">
+						      <button class="btn btn-secondary btn-lg" type="submit">Send</button>
+						    </div>
+
+						  </form>
+
+						</div>
+
+						<!-- SB Forms JS -->
+						<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+
+
+				
+		    </div>
+	    </section>
+
+	    {%endblock content%}
+
+	   
+

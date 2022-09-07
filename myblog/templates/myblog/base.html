@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+   
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+	<script defer src="/static/assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="/static/assets/css/theme-1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style type="text/css">
+
+    	
+    </style>
+
+</head> 
+
+<body>
+    
+    <header class="header text-center">	    
+    	<!--carocel-->
+             
+
+    	<!--endcarocel-->
+	    <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="index.html">Lamine MASSALY 's Blog</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="/media/images/blog/profile.jpg" alt="image" >			
+					
+					<div class="bio mb-3">Salut !! Je suis etudiant en PHYSIQUE A L'université Cheikh-Anta-Diop (UCAD) de DAKAR depuis 2022<br><a href="https://www.linkedin.com/in/lamine-massaly-940799233/">Find out more about me</a></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="https://www.linkedin.com/in/lamine-massaly-940799233/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://github.com/EtudiantUcad"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://www.facebook.com/lamine.massaly.14"><i class="fab fa-facebook-f"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-start">
+					<li class="nav-item">
+					    <a class="nav-link active" href="/"><i class="fas fa-home fa-fw me-2"></i>Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="{% url 'contact-view'%}"><i class="fas fa-tty fa-fw me-2"></i> Contact </a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="{% url 'cv-view'%}"><i class="fas fa-file-alt	 fa-fw me-2"></i>Cv</a>
+					</li>
+				</ul>
+				
+				
+			</div>
+		</nav>
+    </header>
+    
+    <div class="main-wrapper">
+    	<!--carocel-->
+       
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://i0.wp.com/www.digitalbusiness.africa/wp-content/uploads/2020/02/intelligence-artificielle.png?fit=1202%2C762&ssl=1" height="450" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.frenchweb.fr/wp-content/uploads/2020/12/IoT.jpg" height="450" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.realites-pediatriques.com/wp-content/uploads/sites/3/2020/04/couverture-8.jpg" class="d-block w-100" alt="..." height="450">
+    </div>
+     <div class="carousel-item">
+      <img src="https://cdn.futura-sciences.com/buildsv6/images/largeoriginal/d/1/e/d1e47c37fa_119289_ia-intelligence-artificielle.jpg" class="d-block w-100" alt="..." height="450">
+    </div>
+     <div class="carousel-item">
+      <img src="https://www.coe.int/documents/13788219/18035560/Artificial+Intelligence/757f89a0-adc7-4755-3cf1-45f911f7e7c2" class="d-block w-100" alt="..." height="450">
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+    	<!--endcarocel-->
+	    
+	    <section class="cta-section theme-bg-light py-5">
+		    <div class="container text-center single-col-max-width">
+			    <h2 class="heading">Lamine MASSALY 's Blog</h2>
+			    <div class="single-form-max-width pt-3 mx-auto">
+				    <form class="signup-form row g-2 g-lg-2 align-items-center" action="{% url 'Search-view'%}" method="GET">
+	                    <div class="col-12 col-md-9">
+	                        <label class="sr-only" for="semail"></label>
+	                        <input type="text"  name="searchdata" class="form-control me-md-1 semail"  placeholder="Search Post Here !!!">
+	                    </div>
+	                    <div class="col-12 col-md-2">
+	                        <button type="submit" class="btn btn-primary">Search</button>
+	                    </div>
+	                </form><!--//signup-form-->
+			    </div><!--//single-form-max-width-->
+		    </div><!--//container-->
+	    </section>
+	   
+	   {%block content%}
+	   {%endblock%}
+	</br></br></br>
+	    <footer class="footer text-center py-2 theme-bg-dark">
+	     <section class="cta-section theme-bg-dark py-5">
+		    <div class="container text-center single-col-max-width">
+			    <div class="intro">Welcome to my blog. Subscribe and get my latest blog post in your inbox.</div>
+			    <div class="single-form-max-width pt-3 mx-auto">
+				    <form class="signup-form row g-2 g-lg-2 align-items-center" action="{% url 'email-view'%}" method="POST">
+	                    <div class="col-12 col-md-9">
+	                    	{% csrf_token %}
+	                        <label class="sr-only" for="semail">Your email</label>
+	                        <input type="email" id="semail" name="email" class="form-control me-md-1 semail"  placeholder="Subscribe : Please Your Email">
+	                    </div>
+	                    <div class="col-12 col-md-2">
+	                        <button type="submit" class="btn btn-primary">Subscribe</button>
+	                    </div>
+	                </form><!--//signup-form-->
+			    </div><!--//single-form-max-width-->
+		    </div><!--//container-->
+	    </section>
+		   
+	      
+	         <small class="copyright">Copyrigth <a href="https://www.linkedin.com/in/lamine-massaly-940799233/" target="_blank">MassalyTech</a> </small>
+		   
+	    </footer>
+    
+    </div><!--//main-wrapper-->
+
+       
+    <!-- Javascript -->          
+    <script src="/static/assets/plugins/popper.min.js"></script> 
+    <script src="/static/assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="/static/assets/js/jquery-3.6.0.min.js"></script>
+
+
+    
+
+
+</div>
+</body>
+</html>

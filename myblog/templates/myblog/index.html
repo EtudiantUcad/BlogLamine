@@ -1,0 +1,60 @@
+{%extends './base.html'%}
+
+{%load static%}
+
+	 {%block content%}
+
+	     <title>Blog</title>
+	    <section class="blog-list px-3 py-5 p-md-5">
+		    <div class="container single-col-max-width">
+		    	{%if messages%}
+				{%for message in messages%}
+				<hr class="solid">
+				  <div class="alert alert-primary alert-dismissible fade show" role="alert">
+				  <strong>Alert du Serveur!!!!</strong> {{message}}
+				  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+				<hr class="solid">
+
+				{%endfor%}
+            {%endif%}
+
+
+
+
+		    	{%if data%}
+
+
+		    	{%for data in data%}
+		    	 
+
+		    	    <div class="item mb-5">
+				    <div class="row g-3 g-xl-0">
+					    <div class="col-2 col-xl-3">
+					    
+					        <img class="img-fluid post-thumb " style="border: 2px;border-radius: 40px;" src="/media/images/{{data.category}}.png" alt="image">
+					      
+					    </div>
+					    <div class="col">
+						    <h3 class="title mb-1"><a class="text-link" href="{% url 'detail-view' data.pk%}">{{data.title}}</a></h3>
+						    <div class="meta mb-1"><span class="date">Published {{data.datetime}}</span><span class="time">Author: Massaly-Tech</span><span class="comment"><a class="text-link" href="{% url 'detail-view' data.pk %}#comment">{{data.comment.count}} comments</a></span></div>
+						    <div class="intro">{{data.body|safe|truncatechars:100}}</div>
+						    <a class="text-link" href="{% url 'detail-view' data.pk %}">Read more &rarr;</a>
+					    </div><!--//col-->
+				    </div><!--//row-->
+			    </div><!--//item-->
+			  
+			   
+
+		    	{%endfor%}
+		    	{%endif%}
+
+
+
+				
+		    </div>
+	    </section>
+	    {%endblock content%}
+
+	   
+
